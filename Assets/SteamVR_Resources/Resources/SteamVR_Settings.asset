@@ -24,8 +24,6 @@ MonoBehaviour:
   autoEnableVR: 1
   legacyMixedRealityCamera: 1
   mixedRealityCameraPose:
-    actionPath: /actions/mixedreality/in/ExternalCamera
-    needsReinit: 0
   mixedRealityCameraInputSource: 11
   mixedRealityActionSetAutoEnable: 1
   previewHandLeft: {fileID: 0}
