@@ -595,7 +595,10 @@ Material:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0aacbf3... Locomotion
 =======
 >>>>>>> parent of 0aacbf3... Locomotion
   m_Name: Sprites/Default
@@ -828,6 +831,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0aacbf3... Locomotion
+=======
 >>>>>>> parent of 0aacbf3... Locomotion
 =======
 >>>>>>> parent of 0aacbf3... Locomotion
@@ -859,7 +865,10 @@ Transform:
 PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0aacbf3... Locomotion
 =======
 >>>>>>> parent of 0aacbf3... Locomotion
   m_ObjectHideFlags: 0
@@ -961,6 +970,7 @@ GameObject:
   - component: {fileID: 871590618}
   - component: {fileID: 871590617}
   - component: {fileID: 871590616}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Layer: 0
   m_Name: Hour Indicator
@@ -1224,6 +1234,8 @@ GameObject:
   - component: {fileID: 871590618}
   - component: {fileID: 871590617}
   - component: {fileID: 871590616}
+=======
+>>>>>>> parent of 0aacbf3... Locomotion
 =======
 >>>>>>> parent of 0aacbf3... Locomotion
   m_Layer: 0
@@ -2073,6 +2085,9 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1593025336
 BoxCollider:
+<<<<<<< HEAD
+>>>>>>> parent of 0aacbf3... Locomotion
+=======
 >>>>>>> parent of 0aacbf3... Locomotion
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2318,6 +2333,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593025334}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!21 &1622879749
 Material:
@@ -2570,6 +2586,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755612526}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> parent of 0aacbf3... Locomotion
 =======
 >>>>>>> parent of 0aacbf3... Locomotion
 --- !u!1 &1766058497
