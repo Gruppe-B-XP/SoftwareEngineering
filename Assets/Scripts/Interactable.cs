@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Interactable : MonoBehaviour
@@ -14,24 +13,6 @@ public class Interactable : MonoBehaviour
         transform.SetParent(hand);
         transform.localRotation = Quaternion.identity;
         transform.localPosition = m_Offset;
-        transform.SetParent(null);
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class NewBehaviourScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
->>>>>>> 0aacbf3cfda2876eef84db1498b4389078a1e2be
+        transform.SetParent(null);        
     }
 }
