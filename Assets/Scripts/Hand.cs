@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+<<<<<<< HEAD
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
@@ -113,5 +114,23 @@ public class Hand : MonoBehaviour
         }
 
         return nearest;
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Hand : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+>>>>>>> 0aacbf3cfda2876eef84db1498b4389078a1e2be
     }
 }
