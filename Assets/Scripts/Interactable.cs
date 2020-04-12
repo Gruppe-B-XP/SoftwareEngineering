@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+public class Interactable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector3 m_Offset = Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
+    [HideInInspector]
+    public Hand m_activeHand = null;
+
+    public void ApplyOffset(Transform hand)
     {
-        
+        transform.SetParent(hand);
+        transform.localRotation = Quaternion.identity;
+        transform.localPosition = m_Offset;
+        transform.SetParent(null);        
     }
 }
