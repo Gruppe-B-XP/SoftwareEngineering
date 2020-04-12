@@ -71,7 +71,7 @@ public class Teleporter : MonoBehaviour
     private bool UpdatePointer()
     {
         // Ray from Controller
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, transform.forward-transform.up);
         RaycastHit hit;
 
         // If it's a hit on the floor
