@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: ae21cf6f8b116574e86b09ce1cfeda3c
-  - enabled: 1
     path: Assets/Scenes/Galerie.unity
     guid: 8c513013c754d984aaf0631d4c87cbc5
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ae21cf6f8b116574e86b09ce1cfeda3c
   - enabled: 1
     path: Assets/Scenes/testModel.unity
     guid: fa8319cfb371a874c91728a0ef811a4a

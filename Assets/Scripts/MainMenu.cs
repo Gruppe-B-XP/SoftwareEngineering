@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEngine.Networking.Types;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -22,7 +19,10 @@ public class MainMenu : MonoBehaviour
 
     public void SelectModel()
     {
-        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "");
+        // Folgendes kann nicht funktionieren. Macht das bitte anders.
+        // Siehe https://stackoverflow.com/questions/56813826/unity-build-error-the-name-editorutility-does-not-exist-in-the-current-contex
+        // Vielen Dank
+        // modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "");
         Debug.Log(modelPath);
     }
 
