@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 using Dummiesman;
 using System.Collections.Specialized;
+using SimpleFileBrowser;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class ChangeScene : MonoBehaviour
     {
 
         //Selecting and importing a file
-
-
-        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
+        FileBrowser.WaitForLoadDialog();
+        modelPath = FileBrowser.Result();
+        // modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
         myModel = new OBJLoader().Load(modelPath);
         Debug.Log(myModel.name);
         //Instantiate(myModel, this.spawnPosition, Quaternion.identity);
