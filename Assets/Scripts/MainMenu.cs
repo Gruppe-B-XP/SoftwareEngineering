@@ -1,15 +1,19 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Dummiesman;
 
 public class MainMenu : MonoBehaviour
 {
 
     public string modelPath;
+    public GameObject myModel;
+    public Scene sceneToLoad = SceneManager.GetSceneByName("Galerie");
 
     public void StartProgram()
     {
-        SceneManager.LoadSceneAsync("Galerie");
+        SceneManager.LoadSceneAsync("Galerie", LoadSceneMode.Additive);
+        SceneManager.MoveGameObjectToScene(myModel, sceneToLoad);
     }
 
     public void QuitProgram()
@@ -17,13 +21,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    //Selecting and importing a file
     public void SelectModel()
     {
-        // Folgendes kann nicht funktionieren. Macht das bitte anders.
-        // Siehe https://stackoverflow.com/questions/56813826/unity-build-error-the-name-editorutility-does-not-exist-in-the-current-contex
-        // Vielen Dank
-        // modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "");
-        Debug.Log(modelPath);
+        
+        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
+        myModel = new OBJLoader().Load(modelPath);
+        Debug.Log(myModel.name);
     }
 
 }
