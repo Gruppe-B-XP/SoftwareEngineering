@@ -628,9 +628,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 622767889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164b789513c22b1408f870aa3b556289, type: 3}
+  m_Script: {fileID: 11500000, guid: c721f953f65b62641bcd67d46594371a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modelPath: 
+  myModel: {fileID: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
+  scaleChange: {x: 0.001, y: 0.001, z: 0.001}
 --- !u!1 &681335385
 GameObject:
   m_ObjectHideFlags: 0
