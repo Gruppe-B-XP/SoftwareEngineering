@@ -11,8 +11,8 @@ public class PlaceModel : MonoBehaviour
         void Start()
         {
             Transform instanciatedAsset;
-
-            instanciatedAsset = (Transform)Instantiate(this._theAsset, 0,0,0, Quaternion.identity);
+            //Instantiate kann keine 5 Argumente haben.
+            //instanciatedAsset = (Transform)Instantiate(this._theAsset, 0,0,0, Quaternion.identity);
             //Do stuff with your instanciatedAsset ...
         }
     }
