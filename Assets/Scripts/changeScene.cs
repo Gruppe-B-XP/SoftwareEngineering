@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
-using UnityEngine.SceneManagement;
 using Dummiesman;
 using System.Collections.Specialized;
 using SimpleFileBrowser;
