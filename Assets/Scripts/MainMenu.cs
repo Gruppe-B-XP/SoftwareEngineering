@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Dummiesman;
 
 public class MainMenu : MonoBehaviour
 {
@@ -17,14 +18,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    //Selecting and importing a file
     public void SelectModel()
     {
-        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "");
-        //TODO: Model importieren
         
-        //TODO: Model in Scene einfügen
+        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
+        GameObject myModel = new OBJLoader().Load(modelPath);
 
-        Debug.Log(modelPath);
+        Debug.Log(myModel.name);
     }
 
 }
