@@ -20,6 +20,10 @@ public class MainMenu : MonoBehaviour
     public void SelectModel()
     {
         modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "");
+        //TODO: Model importieren
+        
+        //TODO: Model in Scene einfügen
+
         Debug.Log(modelPath);
     }
 
