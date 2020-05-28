@@ -12,8 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartProgram()
     {
-        SceneManager.LoadSceneAsync("Galerie", LoadSceneMode.Additive);
-        SceneManager.MoveGameObjectToScene(myModel, sceneToLoad);
+        SceneManager.LoadSceneAsync("Galerie");
     }
 
     public void QuitProgram()
