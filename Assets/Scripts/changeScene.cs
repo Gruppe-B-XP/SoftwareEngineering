@@ -20,8 +20,7 @@ public class ChangeScene : MonoBehaviour
     {
 
         //Selecting and importing a file
-        FileBrowser.WaitForLoadDialog();
-        modelPath = FileBrowser.Result();
+        FileBrowser.ShowLoadDialog((path) => { modelPath = path; }, () => { }, false, null, "Select Model", "Select") ;
         // modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
         myModel = new OBJLoader().Load(modelPath);
         Debug.Log(myModel.name);
