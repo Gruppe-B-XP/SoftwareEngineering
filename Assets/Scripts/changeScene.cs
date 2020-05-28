@@ -9,6 +9,5 @@ public class ChangeScene : MonoBehaviour
     void OnMouseDown()
     {
         SceneManager.LoadScene(NewScene);
-        //Debug.Log("Scene found", NewScene);
     }
 }
