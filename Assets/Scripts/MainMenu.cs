@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public string modelPath;
     public GameObject myModel;
     //public Scene sceneToLoad = SceneManager.GetSceneByName("Galerie");
-    public Vector3 spawnPosition;
+    public Vector3 spawnPosition, scale;
 
     public void StartProgram()
     {
@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviour
         myModel = new OBJLoader().Load(modelPath);
         Debug.Log(myModel.name);
         Instantiate(myModel, this.spawnPosition, Quaternion.identity);
+
     }
 
 }

@@ -192,7 +192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 843307730}
+      objectReference: {fileID: 622767894}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: right.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -208,6 +208,16 @@ PrefabInstance:
       propertyPath: left.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 843307730}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMouseDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 555d52bffcd32a443a2dc023d88e860f, type: 3}
 --- !u!1 &180758862
@@ -635,6 +645,7 @@ MonoBehaviour:
   myModel: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   scaleChange: {x: 0.001, y: 0.001, z: 0.001}
+  player: {fileID: 1940644505}
 --- !u!1 &681335385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1413,12 @@ MeshFilter:
 --- !u!4 &1895976314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 967067932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1940644505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
     type: 3}
   m_PrefabInstance: {fileID: 967067932}
   m_PrefabAsset: {fileID: 0}

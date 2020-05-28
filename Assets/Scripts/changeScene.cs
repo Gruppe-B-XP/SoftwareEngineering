@@ -15,7 +15,7 @@ public class ChangeScene : MonoBehaviour
     public Vector3 spawnPosition, scaleChange;
     public GameObject player;
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
 
         //Selecting and importing a file
