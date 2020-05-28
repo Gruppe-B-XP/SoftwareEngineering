@@ -7,10 +7,13 @@ public class MainMenu : MonoBehaviour
 {
 
     public string modelPath;
+    public GameObject myModel;
+    public Scene sceneToLoad = SceneManager.GetSceneByName("Galerie");
 
     public void StartProgram()
     {
-        SceneManager.LoadSceneAsync("Galerie");
+        SceneManager.LoadSceneAsync("Galerie", LoadSceneMode.Additive);
+        SceneManager.MoveGameObjectToScene(myModel, sceneToLoad);
     }
 
     public void QuitProgram()
@@ -23,8 +26,7 @@ public class MainMenu : MonoBehaviour
     {
         
         modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
-        GameObject myModel = new OBJLoader().Load(modelPath);
-
+        myModel = new OBJLoader().Load(modelPath);
         Debug.Log(myModel.name);
     }
 
