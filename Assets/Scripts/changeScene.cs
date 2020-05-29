@@ -1,16 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 using Dummiesman;
 using System.Collections.Specialized;
 using SimpleFileBrowser;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 public class ChangeScene : MonoBehaviour
 {
-    //public string NewScene;
     public string modelPath;
     public GameObject myModel;
     public Vector3 spawnPosition, scaleChange;
@@ -18,19 +19,27 @@ public class ChangeScene : MonoBehaviour
 
     public void OnMouseDown()
     {
-
         //Selecting and importing a file
-        FileBrowser.WaitForLoadDialog();
-        modelPath = FileBrowser.Result();
-        // modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
-        myModel = new OBJLoader().Load(modelPath);
-        Debug.Log(myModel.name);
-        //Instantiate(myModel, this.spawnPosition, Quaternion.identity);
-        // new Vector3 scaleChange2 = new Vector3(-0.001f, -0.001f, -0.001f);
-        myModel.transform.localScale = scaleChange;
-        player.transform.position = new Vector3(0, 0, 75);
+        FileBrowser.SetFilters(true, ".obj");
+        FileBrowser.SetDefaultFilter(".obj");
+        FileBrowser.ShowLoadDialog((path) => { modelPath = path; }, () => { }, false, null, "Select Model", "Select");
+        while (String.IsNullOrEmpty(modelPath) == true)
+        {
+            print("wait");
+        }
+        //yield return new WaitUntil(() => String.IsNullOrEmpty(modelPath) == false);
+        //await String.IsNullOrEmpty(modelPath)
 
+
+
+        myModel = new OBJLoader().Load(modelPath);
+        //myModel = new OBJLoader().Load("C:/Users/silas/Desktop/Neumatt-3D.obj");
+        myModel.transform.localScale = scaleChange;
+        //myModel.GetComponentInChildren<Renderer>().material = "blue" ;
+        player.transform.position = new Vector3(0, 0, 10);
 
 
     }
+
+
 }

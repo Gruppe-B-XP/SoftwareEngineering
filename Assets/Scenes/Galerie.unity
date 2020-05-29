@@ -644,7 +644,7 @@ MonoBehaviour:
   modelPath: 
   myModel: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
-  scaleChange: {x: 0.001, y: 0.001, z: 0.001}
+  scaleChange: {x: 0.0001, y: 0.0001, z: 0.0001}
   player: {fileID: 1940644505}
 --- !u!1 &681335385
 GameObject:

@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Dummiesman;
 using System.Collections;
@@ -26,11 +25,7 @@ public class MainMenu : MonoBehaviour
     //Selecting and importing a file
     public void SelectModel()
     {
-        
-        modelPath = EditorUtility.OpenFilePanel("Ein Modell auswählen", "", "obj");
-        myModel = new OBJLoader().Load(modelPath);
-        Debug.Log(myModel.name);
-        Instantiate(myModel, this.spawnPosition, Quaternion.identity);
+
 
     }
 
