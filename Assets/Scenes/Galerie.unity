@@ -190,14 +190,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 908065737}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: right.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 843307730}
+      objectReference: {fileID: 908065737}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: bottom.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -211,11 +216,46 @@ PrefabInstance:
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMouseDown
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: right.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: right.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
