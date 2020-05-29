@@ -18,31 +18,27 @@ public class Import : MonoBehaviour
 
     public void OnMouseDown()
     {
-    //Selecting and importing a file
-    FileBrowser.SetFilters(true, ".obj");
-    FileBrowser.SetDefaultFilter(".obj");
-    StartCoroutine(ShowLoadDialogCoroutine() );
-    player.transform.position = new Vector3(0, 0, 10);
-    myModel.transform.localScale = scaleChange;
-
-
-
-
-
+        //Selecting and importing a file
+        FileBrowser.SetFilters(true, ".obj");
+        FileBrowser.SetDefaultFilter(".obj");
+        StartCoroutine(ShowLoadDialogCoroutine());
     }
 
-IEnumerator ShowLoadDialogCoroutine()
-{
-	// Show a load file dialog and wait for a response from user
-	// Load file/folder: file, Initial path: default (Documents), Title: "Load File", submit button text: "Load"
-	yield return FileBrowser.WaitForLoadDialog(false, null, "Load File", "Load");
-        modelPath = FileBrowser.Result;
-        myModel = new OBJLoader().Load(modelPath);
 
-        
+    IEnumerator ShowLoadDialogCoroutine()
+    {
+	yield return FileBrowser.WaitForLoadDialog(false, null, "Suche dir ein windschnittiges Model aus", "Laden");
+        if (FileBrowser.Success)
+        {
+            modelPath = FileBrowser.Result;
+            myModel = new OBJLoader().Load(modelPath);
+            player.transform.position = new Vector3(0, 0, 10);
+            myModel.transform.localScale = scaleChange;
+        }
 
 
-    }
+
+        }
 }
 
 
