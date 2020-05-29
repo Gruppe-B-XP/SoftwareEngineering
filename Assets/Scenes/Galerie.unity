@@ -192,7 +192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622767894}
+      objectReference: {fileID: 0}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: right.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -488,30 +488,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392021518}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &473940235 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6904352560362096173, guid: ec05c9d9ce2cd894f80ae6f97340a5bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 6904352561017243662}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &473940236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6904352560362096170, guid: ec05c9d9ce2cd894f80ae6f97340a5bd,
     type: 3}
   m_PrefabInstance: {fileID: 6904352561017243662}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &473940238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473940235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164b789513c22b1408f870aa3b556289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &558248208
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +611,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6904352561017243662}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &622767894
+--- !u!114 &622767890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -638,12 +620,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 622767889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c721f953f65b62641bcd67d46594371a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9754e07eb2b0144448bfefef49b5f533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modelPath: 
   myModel: {fileID: 0}
-  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnPosition: {x: 1, y: 1, z: 1}
   scaleChange: {x: 0.001, y: 0.001, z: 0.001}
   player: {fileID: 1940644505}
 --- !u!1 &681335385
