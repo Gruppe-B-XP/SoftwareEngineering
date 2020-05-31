@@ -30,6 +30,7 @@ public class ScreenshotHandler : MonoBehaviour
             // save those pixel into a byte array and save it as PNG
             byte[] pixels = result.EncodeToPNG();
             System.IO.File.WriteAllBytes(Application.dataPath + "/Screenshot" + x + ".png", pixels);
+            x++;
 
             // reset the Camera target and the Rendertexture
             myCamera.targetTexture = null;
