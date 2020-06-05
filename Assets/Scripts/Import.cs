@@ -42,15 +42,7 @@ public class Import : MonoBehaviour
 
         }
 
-    public void scaleDown()
-    {
-        myModel.transform.localScale -= Vector3(0.1, 0.1, 0.1);
-    }
 
-    public void positionX()
-    {
-        myModel.transform.position = Vector3(0, 0, 10);
-    }
 }
 
 
