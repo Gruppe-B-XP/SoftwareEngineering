@@ -22,6 +22,7 @@ public class Import : MonoBehaviour
         FileBrowser.SetFilters(true, ".obj");
         FileBrowser.SetDefaultFilter(".obj");
         StartCoroutine(ShowLoadDialogCoroutine());
+        
     }
 
 
@@ -34,11 +35,22 @@ public class Import : MonoBehaviour
             myModel = new OBJLoader().Load(modelPath);
             player.transform.position = new Vector3(0, 0, 10);
             myModel.transform.localScale = scaleChange;
+            this.GetComponent<ScreenshotHandler>().Screenshot(100,100);
         }
 
 
 
         }
+
+    public void scaleDown()
+    {
+        myModel.transform.localScale -= Vector3(0.1, 0.1, 0.1);
+    }
+
+    public void positionX()
+    {
+        myModel.transform.position = Vector3(0, 0, 10);
+    }
 }
 
 
