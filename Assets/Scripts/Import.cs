@@ -15,6 +15,7 @@ public class Import : MonoBehaviour
     public GameObject myModel;
     public Vector3 spawnPosition, scaleChange;
     public GameObject player;
+    public ScreenshotHandler screenshot;
 
     public void OnMouseDown()
     {
@@ -22,36 +23,36 @@ public class Import : MonoBehaviour
         FileBrowser.SetFilters(true, ".obj");
         FileBrowser.SetDefaultFilter(".obj");
         StartCoroutine(ShowLoadDialogCoroutine());
-        
+
     }
 
-
+    //Coroutine for import
     IEnumerator ShowLoadDialogCoroutine()
     {
-	yield return FileBrowser.WaitForLoadDialog(false, null, "Suche dir ein windschnittiges Model aus", "Laden");
+        yield return FileBrowser.WaitForLoadDialog(false, null, "Suche dir ein windschnittiges Model aus", "Laden");
         if (FileBrowser.Success)
         {
             modelPath = FileBrowser.Result;
-            myModel = new OBJLoader().Load(modelPath);
-            player.transform.position = new Vector3(0, 0, 10);
-            myModel.transform.localScale = scaleChange;
-            this.GetComponent<ScreenshotHandler>().Screenshot(100,100);
         }
-
-
-
-        }
+        myModel = new OBJLoader().Load(modelPath);
+        myModel.transform.position = spawnPosition;
+        myModel.transform.localScale = scaleChange;
+        screenshot.Screenshot(100,100);
+    }
     public void scaleDown()
     {
-        scaleChange = new Vector3(-0.1f, -0.1f, -0.1f);
-        myModel.transform.localScale = scaleChange;
+        myModel.transform.localScale = myModel.transform.localScale * 0.5f;
+    }
+    public void scaleUp()
+    {
+        myModel.transform.localScale = myModel.transform.localScale * 2;
     }
 
-    public void positionX()
+    public void rotate()
     {
-        myModel.transform.position = new Vector3(0, 0, 10);
+        var rotationVector = myModel.transform.rotation.eulerAngles;
+        rotationVector.x = -90;
+        myModel.transform.rotation = Quaternion.Euler(rotationVector);
     }
 
 }
-
-
