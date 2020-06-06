@@ -1198,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1301602052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1538742179}
   - component: {fileID: 1538742178}
-  - component: {fileID: 1538742177}
   - component: {fileID: 1538742176}
   m_Layer: 0
   m_Name: ScreenshotCamera
@@ -1367,14 +1366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0326e05011e39604494a440627828731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &1538742177
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538742175}
-  m_Enabled: 1
 --- !u!20 &1538742178
 Camera:
   m_ObjectHideFlags: 0
@@ -1426,7 +1417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538742175}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 14.01, z: 2.9}
+  m_LocalPosition: {x: 0, y: 15, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2166,5 +2157,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 25505c45cde55ab4581c30195145adc8, type: 2}
+    - target: {fileID: 6904352561236397082, guid: ec05c9d9ce2cd894f80ae6f97340a5bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Screenshot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec05c9d9ce2cd894f80ae6f97340a5bd, type: 3}

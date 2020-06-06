@@ -1,48 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class ScreenshotHandler : MonoBehaviour
 {
 
     private Camera myCamera;
-    //private static ScreenshotHandler instance;
-    private bool takeScreenshot;
-    private int x = 0;
+    private GameObject targetObject;
+    private Renderer targetRenderer;
 
     private void Awake()
     {
-        //instance = this;
         myCamera = gameObject.GetComponent<Camera>();
     }
 
-    private void Update()
+    public IEnumerator Screenshot(int width, int height)
     {
-        if (takeScreenshot)
-        {
-            takeScreenshot = false;
-            // make the camera render a rectangle with the pixel of the selected width and height.
-            RenderTexture renderTexture = myCamera.targetTexture;
-            Texture2D result = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false);
-            Rect rectangle = new Rect(0, 0, renderTexture.width, renderTexture.height);
-            result.ReadPixels(rectangle, 0, 0);
+        // wait for end of frame to take the screenshot
+        yield return new WaitForEndOfFrame();
+        myCamera = GetComponent<Camera>();
+        // render new texture
+        RenderTexture renTex = new RenderTexture(width, height, 0, RenderTextureFormat.ARGB32);
+        myCamera.targetTexture = renTex;
+        myCamera.Render();
+        // set the rendering to active
+        RenderTexture currentRT = RenderTexture.active;
+        RenderTexture.active = myCamera.targetTexture;
 
-            // save those pixel into a byte array and save it as PNG
-            byte[] pixels = result.EncodeToPNG();
-            System.IO.File.WriteAllBytes(Application.dataPath + "/Screenshot" + x + ".png", pixels);
-            x++;
+        //take the screenshot
+        Texture2D screenshot = new Texture2D(width, height, TextureFormat.ARGB32, false);
+        screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
+        screenshot.Apply();
 
-            // reset the Camera target and the Rendertexture
-            myCamera.targetTexture = null;
-            RenderTexture.ReleaseTemporary(renderTexture);
-        }
+        //set the texture into the inner frame object marked with the tag Screenshot
+        targetObject = GameObject.FindGameObjectWithTag("Screenshot");
+        targetRenderer = targetObject.GetComponent<Renderer>();
+        targetRenderer.material.SetTexture("Texture", screenshot);
+
+        // clear the camera rendering
+        myCamera.targetTexture = null;
+        RenderTexture.active = currentRT;
+
     }
-
-    public void Screenshot (int width, int height)
-    {
-        myCamera.targetTexture = RenderTexture.GetTemporary(width, height);
-        takeScreenshot = true;
-    }
-
-    
 }

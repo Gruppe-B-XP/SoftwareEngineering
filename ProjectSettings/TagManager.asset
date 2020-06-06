@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - projectile
   - FxTemporaire
+  - Screenshot
   layers:
   - Default
   - TransparentFX
