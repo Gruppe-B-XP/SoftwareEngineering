@@ -644,8 +644,8 @@ MonoBehaviour:
   modelPath: 
   myModel: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
-  scaleChange: {x: 0.001, y: 0.001, z: 0.001}
-  player: {fileID: 1940644505}
+  scaleChange: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
 --- !u!1 &681335385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,12 +1365,6 @@ MeshFilter:
 --- !u!4 &1895976314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 967067932}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1940644505 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
     type: 3}
   m_PrefabInstance: {fileID: 967067932}
   m_PrefabAsset: {fileID: 0}
