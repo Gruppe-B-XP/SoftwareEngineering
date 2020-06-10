@@ -15,6 +15,7 @@ public class Import : MonoBehaviour
     public GameObject myModel;
     public Vector3 spawnPosition, scaleChange;
     public GameObject player;
+    public GameObject galerie;
     public ScreenshotHandler screenshot;
 
     public void OnMouseDown()
@@ -55,4 +56,9 @@ public class Import : MonoBehaviour
         myModel.transform.rotation = Quaternion.Euler(rotationVector);
     }
 
+    public void hideGalarie()
+    {
+        player.transform.position = spawnPosition;
+        galerie.SetActive(!galerie.activeSelf);
+    }
 }
