@@ -18,6 +18,8 @@ public class Import : MonoBehaviour
     public GameObject galerie;
     public ScreenshotHandler screenshot;
 
+    public bool galerie_toggle = true;
+
     public void OnMouseDown()
     {
         //Selecting and importing a file
@@ -44,6 +46,7 @@ public class Import : MonoBehaviour
     {
         myModel.transform.localScale = myModel.transform.localScale * 0.5f;
     }
+
     public void scaleUp()
     {
         myModel.transform.localScale = myModel.transform.localScale * 2;
@@ -58,7 +61,11 @@ public class Import : MonoBehaviour
 
     public void hideGalarie()
     {
-        player.transform.position = spawnPosition;
-        galerie.SetActive(!galerie.activeSelf);
+        if(galerie_toggle) {
+            galerie.SetActive(!galerie.activeSelf);
+        } else {
+            galerie.SetActive(galerie.activeSelf);
+            player.transform.position = spawnPosition;
+        }
     }
 }
