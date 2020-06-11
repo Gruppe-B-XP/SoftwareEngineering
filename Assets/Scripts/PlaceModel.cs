@@ -18,7 +18,8 @@ public class PlaceModel : MonoBehaviour
         GameObject instModel = instanciatedAsset.GetComponent<GameObject>();
         instanciatedAsset.transform.localScale = new Vector3(transform.localScale.x, 500F, transform.localScale.y);
 
+            //instanciatedAsset = (Transform)Instantiate(this._theAsset,0,0,0,Quaternion.identity);
+            //Do stuff with your instanciatedAsset ...
     }
-
 
 }

@@ -683,11 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c721f953f65b62641bcd67d46594371a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelPath: 
-  myModel: {fileID: 0}
-  spawnPosition: {x: 0, y: 0, z: 0}
-  scaleChange: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
 --- !u!1 &681335385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,9 +1161,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelPath: 
   myModel: {fileID: 0}
-  spawnPosition: {x: 0, y: 0, z: 10}
+  spawnPosition: {x: -1, y: -6, z: -9}
   scaleChange: {x: 0.1, y: 0.1, z: 0.1}
-  player: {fileID: 1940644505}
+  player: {fileID: 1806036968}
+  galerie: {fileID: 872742921}
   screenshot: {fileID: 1538742176}
 --- !u!114 &908065740
 MonoBehaviour:
@@ -1186,7 +1182,8 @@ MonoBehaviour:
   myModel: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 20}
   scaleChange: {x: 1, y: 1, z: 1}
-  player: {fileID: 1940644505}
+  player: {fileID: 0}
+  galerie: {fileID: 0}
   screenshot: {fileID: 0}
 --- !u!1001 &967067932
 PrefabInstance:
@@ -1715,6 +1712,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730869552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1806036968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 967067932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1895779663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1770,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1996,11 +2000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 843307730}
+      objectReference: {fileID: 908065739}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetColor
+      value: hideGalarie
       objectReference: {fileID: 0}
     - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}
@@ -2051,6 +2055,11 @@ PrefabInstance:
         type: 3}
       propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: white
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949867569115068654, guid: 555d52bffcd32a443a2dc023d88e860f,
+        type: 3}
+      propertyPath: top.onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9079747467070859982, guid: 555d52bffcd32a443a2dc023d88e860f,
         type: 3}

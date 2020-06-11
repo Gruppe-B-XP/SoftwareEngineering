@@ -15,7 +15,10 @@ public class Import : MonoBehaviour
     public GameObject myModel;
     public Vector3 spawnPosition, scaleChange;
     public GameObject player;
+    public GameObject galerie;
     public ScreenshotHandler screenshot;
+
+    public bool galerie_toggle = true;
 
     public void OnMouseDown()
     {
@@ -43,6 +46,7 @@ public class Import : MonoBehaviour
     {
         myModel.transform.localScale = myModel.transform.localScale * 0.5f;
     }
+
     public void scaleUp()
     {
         myModel.transform.localScale = myModel.transform.localScale * 2;
@@ -55,4 +59,13 @@ public class Import : MonoBehaviour
         myModel.transform.rotation = Quaternion.Euler(rotationVector);
     }
 
+    public void hideGalarie()
+    {
+        if(galerie_toggle) {
+            galerie.SetActive(!galerie.activeSelf);
+        } else {
+            galerie.SetActive(galerie.activeSelf);
+            player.transform.position = spawnPosition;
+        }
+    }
 }
